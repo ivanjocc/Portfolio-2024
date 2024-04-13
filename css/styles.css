@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #35356e;
+}
+
 /* Header */
 header {
 	font-family: 'Open Sans', sans-serif;
@@ -14,7 +19,7 @@ header {
 	justify-content: space-between;
 	padding: 10px 40px;
 	align-items: center;
-	background-color: #003366;
+	background-color: #35356e;
 	color: white;
 	z-index: 1000;
 	top: 0;
@@ -50,7 +55,7 @@ header {
 	padding-top: 50px;
 	position: relative;
 	overflow: hidden;
-	height: 800px;
+	height: 950px;
 }
 
 .banner h1 {
@@ -95,7 +100,7 @@ header {
 .banner-content button {
     padding: 15px 30px;
     margin-top: 30px;
-    background-color: #007BFF;
+    background-color: #35356e;
     color: white;
     font-size: 1.2em;
     font-weight: bold;
@@ -115,6 +120,87 @@ header {
 .banner-content button:active {
     transform: translateY(-1px);
 }
+
+/* Section 2 and 3 */
+.about-skills {
+    display: flex;
+    justify-content: space-between;
+    background-color: #35356E;
+    padding: 40px;
+    color: #fff;
+    gap: 20px;
+}
+
+.about-me {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.about-me, .skills {
+    flex: 1;
+	align-items: center;
+	vertical-align: middle;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-me h2, .skills h2, .skill-category h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #CCCCCC;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.about-me h2 {
+    margin-bottom: 50px;
+}
+
+.about-me p {
+    font-size: 1.5em;
+    color: #CCCCCC;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.skill-category h3 {
+    font-size: 1.5em;
+	padding-top: 20px;
+}
+
+.skill-category div {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #CCCCCC;
+}
+
+.skill-category div {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-category i {
+    margin-right: 8px;
+    color: #0A81AB;
+    transition: color 0.3s ease, transform 0.3s ease;
+	font-size: 2rem;
+}
+
+.skill-category i:hover {
+    color: #89CFF0;
+    transform: scale(1.1);
+}
+
 
 
 
