@@ -4,40 +4,139 @@
 	box-sizing: border-box;
 }
 
+/* Header */
 header {
 	font-family: 'Open Sans', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-    align-items: center;
-    background-color: #003366;
-    color: white;
+	position: fixed;
+	width: 100%;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 40px;
+	align-items: center;
+	background-color: #003366;
+	color: white;
+	z-index: 1000;
+	top: 0;
+	left: 0;
 }
 
 .logo img {
-    height: 50px;
+	height: 50px;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links li {
+	cursor: pointer;
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .menu-hamburguer {
-    display: none;
+	display: none;
 }
 
+/* Section 1 */
+.banner {
+	font-family: 'Source Code Pro', monospace;
+	padding-top: 50px;
+	position: relative;
+	overflow: hidden;
+	height: 800px;
+}
+
+.banner h1 {
+	color: white;
+	text-align: left;
+	font-size: 2.5em;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 10px 0;
+	animation: typing 4s steps(40, end) infinite;
+}
+
+#videoBackground {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content button {
+    padding: 15px 30px;
+    margin-top: 30px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+.banner-content button:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+}
+
+.banner-content button:active {
+    transform: translateY(-1px);
+}
+
+
+
+/* Media queries */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .menu-hamburguer {
-        display: block;
-    }
+	.nav-links {
+		display: none;
+	}
+
+	.menu-hamburguer {
+		display: block;
+	}
+}
+
+/* Key frames */
+
+@keyframes typing {
+	from {
+		width: 0
+	}
+
+	to {
+		width: 100%
+	}
 }

@@ -16,10 +16,11 @@
 </head>
 
 <body>
+	<!-- Header -->
 	<header>
 		<div class="logo">
 			<a href="./index.html">
-				<img src="./assets/logo.png" alt="Logo">
+				<img src="./assets/img/logo.png" alt="Logo">
 			</a>
 		</div>
 		<nav class="navbar">
@@ -38,9 +39,30 @@
 		</nav>
 	</header>
 
+	<!-- Section 1 -->
+	<section class="banner">
+		<video autoplay muted loop id="videoBackground">
+			<source src="./assets/video/banner.mp4" type="video/mp4">
+			Tu navegador no soporta videos HTML5.
+		</video>
+		<div class="banner-content">
+			<h1>Hi I'm Ivan<br>I love to create web apps</h1>
+			<button onclick="scrollToProjects()">See My Projects</button>
+		</div>
+	</section>
+
+
 	<script src="./js/mode.js"></script>
 	<script src="./js/menu.js"></script>
 	<script src="./js/language.js"></script>
+
+	<script>
+		function scrollToProjects() {
+			const projectsSection = document.getElementById('projects');
+			projectsSection.scrollIntoView({ behavior: 'smooth' });
+		}
+
+	</script>
 
 </body>
 
