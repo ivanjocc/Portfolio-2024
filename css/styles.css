@@ -7,7 +7,7 @@
 body {
 	/* font-family: 'Open Sans', sans-serif; */
 	font-family: 'JetBrains Mono', monospace;
-	background-color: #35356e;
+	background-color: #5e5ea5;
 }
 
 /* Header */
@@ -126,7 +126,7 @@ header {
 }
 
 
-/* Section 2 and 3 */
+/* Section 2 */
 .about-skills {
 	font-family: 'JetBrains Mono', monospace;
     display: flex;
@@ -136,7 +136,7 @@ header {
     text-align: center;
     max-width: 100%; 
     margin: 0 auto;
-	padding-top: 40px;
+	padding: 100px 0;
 	height: 600px;
 	background: linear-gradient(to bottom, #35356e 0%, #5a5a9f 100%);
 }
@@ -150,7 +150,7 @@ header {
 
 .about-me p {
 	font-size: 2rem;
-	width: 80%;
+	width: 70%;
 	text-align: center;
 	margin: 0 auto;
 	color: white;
@@ -186,16 +186,83 @@ header {
 }
 
 
-/* Media queries */
-@media (max-width: 768px) {
-	.nav-links {
-		display: none;
-	}
-
-	.menu-hamburguer {
-		display: block;
-	}
+/* Section 3 */
+.projects {
+	width: 90%;
+	margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #5e5ea5;
+    padding: 50px 0;
 }
+
+.section-title {
+    width: 100%;
+	padding-top: 50px;
+	font-size: 3rem;
+    text-align: center;
+	text-shadow: 2px 2px 4px #000000;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    width: 21%;
+    margin: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: #050505;
+    font-weight: bold;
+	font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    margin-bottom: 15px;
+    color: #141313;
+	line-height: 1.4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #35356e; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a5a9f;
+    color: #000;
+    transform: translateY(-3px);
+    border-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
 
 /* Key frames */
 
@@ -217,5 +284,22 @@ header {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* Media queries */
+@media (max-width: 768px) {
+	.nav-links {
+		display: none;
+	}
+
+	.menu-hamburguer {
+		display: block;
+	}
+
+	.project-card {
+        width: 100%;
+        margin: 10px 0;
     }
 }
