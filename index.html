@@ -46,6 +46,7 @@
 			<h1>Hi I'm Ivan<br>I love to create web apps</h1>
 			<button onclick="scrollToProjects()">See My Projects</button>
 		</div>
+		<div id="custom-cursor"></div>
 	</section>
 
 	<!-- Section About and skills -->
@@ -180,7 +181,7 @@
 		</div>
 	</footer>
 
-	
+
 	<!-- Floating buttons -->
 	<div class="floating-social-icons">
 		<a href="https://github.com/ivanjocc" target="_blank" rel="noopener noreferrer">
@@ -193,14 +194,33 @@
 			<i class="fas fa-envelope"></i>
 		</a>
 	</div>
-	
-	
+
+
 	<!-- Scripts -->
 
 	<script src="./js/menu.js"></script>
 	<script src="./js/language.js"></script>
 
 	<script>
+		// Script cursor
+		document.addEventListener('DOMContentLoaded', function () {
+			const banner = document.getElementById('home');
+			const customCursor = document.getElementById('custom-cursor');
+
+			banner.addEventListener('mousemove', function (e) {
+				const x = e.pageX - banner.offsetLeft - 15;
+				const y = e.pageY - banner.offsetTop - 15;
+				customCursor.style.display = 'block';
+				customCursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+			});
+
+			banner.addEventListener('mouseleave', function () {
+				customCursor.style.display = 'none';
+			});
+		});
+
+
+		// Script update year
 		document.addEventListener('DOMContentLoaded', function () {
 			var currentYear = new Date().getFullYear();
 			document.getElementById('current-year').textContent = currentYear;
@@ -210,6 +230,7 @@
 			projectsSection.scrollIntoView({ behavior: 'smooth' });
 		}
 
+		// Function copy email clipboard
 		function copyEmail() {
 			const email = document.getElementById("email");
 			navigator.clipboard.writeText(email.value).then(() => {
@@ -223,6 +244,7 @@
 			});
 		}
 
+		// Function send mail
 		function sendEmail() {
 			var email = document.getElementById("email").value;
 			window.location.href = `mailto:${email}`;
