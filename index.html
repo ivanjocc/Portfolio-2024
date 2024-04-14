@@ -200,56 +200,10 @@
 
 	<script src="./js/menu.js"></script>
 	<script src="./js/language.js"></script>
-
-	<script>
-		// Script cursor
-		document.addEventListener('DOMContentLoaded', function () {
-			const banner = document.getElementById('home');
-			const customCursor = document.getElementById('custom-cursor');
-
-			banner.addEventListener('mousemove', function (e) {
-				const x = e.pageX - banner.offsetLeft - 15;
-				const y = e.pageY - banner.offsetTop - 15;
-				customCursor.style.display = 'block';
-				customCursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-			});
-
-			banner.addEventListener('mouseleave', function () {
-				customCursor.style.display = 'none';
-			});
-		});
-
-
-		// Script update year
-		document.addEventListener('DOMContentLoaded', function () {
-			var currentYear = new Date().getFullYear();
-			document.getElementById('current-year').textContent = currentYear;
-		});
-		function scrollToProjects() {
-			const projectsSection = document.getElementById('projects');
-			projectsSection.scrollIntoView({ behavior: 'smooth' });
-		}
-
-		// Function copy email clipboard
-		function copyEmail() {
-			const email = document.getElementById("email");
-			navigator.clipboard.writeText(email.value).then(() => {
-				const toast = document.getElementById("copy-message");
-				toast.className = "toast show";
-				setTimeout(() => {
-					toast.className = toast.className.replace("show", "");
-				}, 3000);
-			}).catch(err => {
-				console.error('Failed to copy text: ', err);
-			});
-		}
-
-		// Function send mail
-		function sendEmail() {
-			var email = document.getElementById("email").value;
-			window.location.href = `mailto:${email}`;
-		}
-	</script>
+	<script src="./js/updateYear.js"></script>
+	<script src="./js/customCursor.js"></script>
+	<script src="./js/smoothScroll.js"></script>
+	<script src="./js/clipboardActions.js"></script>
 
 </body>
 

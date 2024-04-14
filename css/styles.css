@@ -4,15 +4,18 @@
 	box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
-	/* font-family: 'Open Sans', sans-serif; */
 	font-family: 'JetBrains Mono', monospace;
 	background-color: #5e5ea5;
 }
 
 /* Header */
 header {
-	/* font-family: 'Open Sans', sans-serif; */
 	font-family: 'JetBrains Mono', monospace;
 	position: fixed;
 	width: 100%;
