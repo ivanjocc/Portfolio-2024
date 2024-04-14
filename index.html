@@ -70,8 +70,9 @@
 				</div>
 				<div class="skill-column">
 					<div class="skill-row"><i class="fab fa-php fa-3x"></i> <i class="fab fa-java fa-3x"></i></div>
-					<div class="skill-row"><i class="fab fa-python fa-3x"></i> <i class="fas fa-database fa-3x"></i></div>
-					
+					<div class="skill-row"><i class="fab fa-python fa-3x"></i> <i class="fas fa-database fa-3x"></i>
+					</div>
+
 				</div>
 				<div class="skill-column">
 					<div class="skill-row"><i class="fab fa-node-js fa-3x"></i> <i class="fab fa-node fa-3x"></i></div>
@@ -129,22 +130,59 @@
 			<img src="./assets/img/solar.jpg" alt="Android Space Game">
 			<div class="project-info">
 				<h3>Space Game in Android</h3>
-				<p>Developed in Java with Android Studio, it's a mobile game where you navigate a spaceship among planets, showing information when interacting.</p>
-				<a href="https://github.com/ivanjocc/Solar-System-Java_Mobile-2-v2" class="btn" target="_blank">GitHub</a>
+				<p>Developed in Java with Android Studio, it's a mobile game where you navigate a spaceship among
+					planets, showing information when interacting.</p>
+				<a href="https://github.com/ivanjocc/Solar-System-Java_Mobile-2-v2" class="btn"
+					target="_blank">GitHub</a>
 			</div>
 		</div>
 		<div class="project-card">
 			<img src="./assets/img/twitter.jpg" alt="NodeJS Twitter Clone">
 			<div class="project-info">
 				<h3>Twitter Clone in NodeJS</h3>
-				<p>API developed in NodeJS that simulates the basic functionality of Twitter, including user creation and tweet posting.</p>
+				<p>API developed in NodeJS that simulates the basic functionality of Twitter, including user creation
+					and tweet posting.</p>
 				<a href="https://github.com/ivanjocc/project_nodejs" class="btn" target="_blank">GitHub</a>
 			</div>
 		</div>
 	</section>
-	
-	
-	
+
+	<!-- Section 4 -->
+	<section class="contact-section">
+		<h2 class="section-title">Contact Me</h2>
+		<div class="email-container">
+			<input type="text" id="email" value="ivanjose_04@hotmail.com" readonly>
+			<button onclick="copyEmail()">Copy</button>
+			<button onclick="sendEmail()">Email Me</button>
+		</div>
+		<span id="copy-message" class="toast">Copied!</span>
+		<div class="cv-download">
+			<h3>Download My CV</h3>
+			<a href="./assets/docs/Resume - EN.pdf" download="CV_Ivan_English.pdf">Download CV in English</a>
+			<a href="./assets/docs/Resume - FR.pdf" download="CV_Ivan_French.pdf">Download CV in French</a>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer-container">
+		<div class="footer-content">
+			<p class="footer-text">
+				© <span id="current-year"></span> Ivan. All rights reserved.
+			</p>
+			<div class="footer-social-icons">
+				<a href="https://github.com/ivanjocc" target="_blank" rel="noopener noreferrer">
+					<i class="fab fa-github"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/ivan-miranda-r/" target="_blank" rel="noopener noreferrer">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="mailto:ivanjose_04@hotmail.com">
+					<i class="fas fa-envelope"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+
 
 
 
@@ -154,11 +192,32 @@
 	<script src="./js/language.js"></script>
 
 	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var currentYear = new Date().getFullYear();
+			document.getElementById('current-year').textContent = currentYear;
+		});
 		function scrollToProjects() {
 			const projectsSection = document.getElementById('projects');
 			projectsSection.scrollIntoView({ behavior: 'smooth' });
 		}
 
+		function copyEmail() {
+			const email = document.getElementById("email");
+			navigator.clipboard.writeText(email.value).then(() => {
+				const toast = document.getElementById("copy-message");
+				toast.className = "toast show";
+				setTimeout(() => {
+					toast.className = toast.className.replace("show", "");
+				}, 3000);
+			}).catch(err => {
+				console.error('Failed to copy text: ', err);
+			});
+		}
+
+		function sendEmail() {
+			var email = document.getElementById("email").value;
+			window.location.href = `mailto:${email}`;
+		}
 	</script>
 
 </body>
