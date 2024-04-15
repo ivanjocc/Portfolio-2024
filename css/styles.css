@@ -308,7 +308,6 @@ header {
 	color: #ffffff;
 }
 
-
 .contact-section .section-title {
 	padding-top: 20px;
 	font-size: 3rem;
@@ -595,6 +594,75 @@ header {
     .btn {
         padding: 8px 16px;
         font-size: 0.9rem;
+    }
+
+	/* Section 4 */
+	.contact-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
+    }
+
+    .contact-section .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-section .email-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact-section .email-container input,
+    .contact-section .email-container button {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .contact-section .cv-download {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section .cv-download a {
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .toast {
+        bottom: 20px;
+    }
+
+	/* Footer */
+	.footer-container {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer-social-icons {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .footer-social-icons i {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .footer-social-icons a {
+        margin: 5px;
     }
 }
 
