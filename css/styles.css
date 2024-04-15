@@ -31,6 +31,10 @@ header {
 	left: 0;
 }
 
+.navbar {
+    display: flex;
+}
+
 .logo img {
 	height: 50px;
 }
@@ -51,11 +55,24 @@ header {
 	padding: 0 20px;
 }
 
-.menu-hamburguer {
-	display: none;
+.mobile-icons {
+    display: none;
 }
 
-/* Section 1 */
+#lang-toggle-mobile {
+    display: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+	text-decoration: none;
+	float: right;
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	cursor: pointer;
+}
+
+/* Banner */
 .banner {
 	font-family: 'Source Code Pro', monospace;
 	padding-top: 50px;
@@ -125,10 +142,10 @@ header {
 	font-weight: bold;
 	border: none;
 	border-radius: 8px;
-	cursor: pointer;
 	transition: transform 0.2s ease, background-color 0.3s ease;
 	outline: none;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	cursor: pointer;
 }
 
 .banner-content button:hover {
@@ -152,7 +169,7 @@ header {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 50px 0;
-	height: 600px;
+	height: auto;
 	background: linear-gradient(to bottom, #35356e 0%, #5e5ea5 100%);
 }
 
@@ -173,14 +190,17 @@ header {
 
 .skill-grid {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	width: 100%;
 }
 
 .skill-column {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	padding: 0 30px;
+	flex-wrap: wrap;
 }
 
 .skill-row {
@@ -252,7 +272,6 @@ header {
 .project-info p {
 	margin-bottom: 15px;
 	color: #141313;
-	/* color: white; */
 	line-height: 1.4;
 }
 
@@ -500,18 +519,74 @@ header {
 }
 
 
-/* Media queries */
+/* Media Queries tablet */
 @media (max-width: 768px) {
 	.nav-links {
 		display: none;
 	}
 
-	.menu-hamburguer {
+	#lang-toggle-mobile {
 		display: block;
 	}
 
 	.project-card {
 		width: 100%;
 		margin: 10px 0;
+	}
+
+	.floating-social-icons {
+		display: none;
+	}
+
+	.banner h1 {
+        font-size: 2.5rem;
+        padding: 5px 0;
+    }
+
+    .banner-content button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+
+	.about-me h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-me p {
+        font-size: 1.5rem;
+        width: 85%;
+    }
+
+    .skill-row i {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Queries mobile */
+@media (max-width: 480px) {
+	.banner h1 {
+		text-align: center;
+        font-size: 2rem;
+    }
+
+    .banner-content button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .about-me p {
+        font-size: 1.2rem;
+    }
+
+    .skill-row i {
+        font-size: 2rem;
+    }
+
+	.skills {
+		display: none;
 	}
 }

@@ -22,28 +22,28 @@
 			<a href="./index.html">
 				<img src="./assets/img/logo.png" alt="Logo">
 			</a>
+			<a id="lang-toggle-mobile">FR</a>
 		</div>
 		<nav class="navbar">
-			<div class="menu-hamburguer">
-				<i class="fas fa-bars"></i>
-			</div>
 			<ul class="nav-links">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about-skills">About Me</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li class="language"><a href="#" id="lang-toggle">FR</a></li>
+				<li class="language"><a id="lang-toggle">FR</a></li>
 			</ul>
 		</nav>
 	</header>
+	
+	
 
-	<!-- Section 1 -->
+	<!-- Banner -->
 	<section class="banner" id="home">
 		<video autoplay muted loop id="videoBackground">
 			<source src="./assets/video/banner-2.mp4" type="video/mp4">
 			Not supported
 		</video>
 		<div class="banner-content">
-			<h1>Hi I'm Ivan<br>I love to create web apps</h1>
+			<h1>Hi I'm Ivan<br>I love to<br>create web apps</h1>
 			<button onclick="scrollToProjects()">See My Projects</button>
 		</div>
 		<div id="custom-cursor"></div>
@@ -151,8 +151,8 @@
 		<h2 class="section-title">Contact Me</h2>
 		<div class="email-container">
 			<input type="text" id="email" value="ivanjose_04@hotmail.com" readonly>
-			<button onclick="copyEmail()">Copy</button>
-			<button onclick="sendEmail()">Email Me</button>
+			<button id="copyButton">Copy</button>
+			<button id="sendEmailButton">Email Me</button>
 		</div>
 		<span id="copy-message" class="toast">Copied!</span>
 		<div class="cv-download">
@@ -198,9 +198,8 @@
 
 
 	<!-- Scripts -->
-
-	<script src="./js/menu.js"></script>
 	<script src="./js/language.js"></script>
+	<script src="./js/language-mobile.js"></script>
 	<script src="./js/updateYear.js"></script>
 	<script src="./js/customCursor.js"></script>
 	<script src="./js/smoothScroll.js"></script>

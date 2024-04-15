@@ -1,4 +1,4 @@
-document.getElementById('lang-toggle').addEventListener('click', function (event) {
+document.getElementById('lang-toggle-mobile').addEventListener('click', function (event) {
 	event.preventDefault();
 
 	var currentLang = this.textContent.trim();
@@ -11,7 +11,7 @@ document.getElementById('lang-toggle').addEventListener('click', function (event
 	}
 });
 
-const translations = {
+const translationsMobile = {
 	en: {
 		"home": "Home",
 		"aboutMe": "About Me",
@@ -110,35 +110,35 @@ const translations = {
 
 function changeLanguage(lang) {
 	// Header
-	document.querySelector('nav .nav-links a[href="#home"]').textContent = translations[lang].home;
-	document.querySelector('nav .nav-links a[href="#about-skills"]').textContent = translations[lang].aboutMe;
-	document.querySelector('nav .nav-links a[href="#projects"]').textContent = translations[lang].projects;
+	document.querySelector('nav .nav-links a[href="#home"]').textContent = translationsMobile[lang].home;
+	document.querySelector('nav .nav-links a[href="#about-skills"]').textContent = translationsMobile[lang].aboutMe;
+	document.querySelector('nav .nav-links a[href="#projects"]').textContent = translationsMobile[lang].projects;
 
 	// Banner
-	document.querySelector('#home .banner-content h1').innerHTML = translations[lang].bannerTitle;
-	document.querySelector('#home .banner-content button').textContent = translations[lang].bannerButton;
+	document.querySelector('#home .banner-content h1').innerHTML = translationsMobile[lang].bannerTitle;
+	document.querySelector('#home .banner-content button').textContent = translationsMobile[lang].bannerButton;
 
 	// About me - Skills
-	document.querySelector('#about-skills .about-me h2').textContent = translations[lang].aboutMeTitle;
-	document.querySelector('#about-skills .about-me p').textContent = translations[lang].aboutMeContent;
+	document.querySelector('#about-skills .about-me h2').textContent = translationsMobile[lang].aboutMeTitle;
+	document.querySelector('#about-skills .about-me p').textContent = translationsMobile[lang].aboutMeContent;
 
 	// Projects
-	document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;
+	document.querySelector('#projects .section-title').textContent = translationsMobile[lang].projectsTitle;
 	document.querySelectorAll('#projects .project-card').forEach((card, index) => {
-		card.querySelector('h3').textContent = translations[lang][`project${index + 1}`].title;
-		card.querySelector('p').textContent = translations[lang][`project${index + 1}`].description;
+		card.querySelector('h3').textContent = translationsMobile[lang][`project${index + 1}`].title;
+		card.querySelector('p').textContent = translationsMobile[lang][`project${index + 1}`].description;
 	});
 
 	// Contact me
-	document.querySelector('.contact-section .section-title').textContent = translations[lang].contactTitle;
-	document.querySelectorAll('.email-container button')[0].textContent = translations[lang].copyButton;
-	document.querySelectorAll('.email-container button')[1].textContent = translations[lang].emailButton;
-	document.getElementById('copy-message').textContent = translations[lang].copyMessage;
-	document.querySelector('.cv-download h3').textContent = translations[lang].downloadCVTitle;
+	document.querySelector('.contact-section .section-title').textContent = translationsMobile[lang].contactTitle;
+	document.querySelectorAll('.email-container button')[0].textContent = translationsMobile[lang].copyButton;
+	document.querySelectorAll('.email-container button')[1].textContent = translationsMobile[lang].emailButton;
+	document.getElementById('copy-message').textContent = translationsMobile[lang].copyMessage;
+	document.querySelector('.cv-download h3').textContent = translationsMobile[lang].downloadCVTitle;
 	document.querySelectorAll('.cv-download a')[0].setAttribute('href', lang === "en" ? './assets/docs/Resume - EN.pdf' : './assets/docs/Resume - FR.pdf');
-	document.querySelectorAll('.cv-download a')[0].textContent = translations[lang].downloadCVButtonEN;
-	document.querySelectorAll('.cv-download a')[1].textContent = translations[lang].downloadCVButtonFR;
+	document.querySelectorAll('.cv-download a')[0].textContent = translationsMobile[lang].downloadCVButtonEN;
+	document.querySelectorAll('.cv-download a')[1].textContent = translationsMobile[lang].downloadCVButtonFR;
 
 	// Footer
-	document.querySelector('.footer-container .footer-text').innerHTML = translations[lang].footerText;
+	document.querySelector('.footer-container .footer-text').innerHTML = translationsMobile[lang].footerText;
 }
