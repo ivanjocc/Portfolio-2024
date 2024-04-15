@@ -298,6 +298,7 @@ header {
 	transform: scale(1.05);
 }
 
+
 /* Section 4 */
 .contact-section {
 	height: 500px;
@@ -521,6 +522,7 @@ header {
 
 /* Media Queries tablet */
 @media (max-width: 768px) {
+	/* Header */
 	.nav-links {
 		display: none;
 	}
@@ -529,15 +531,18 @@ header {
 		display: block;
 	}
 
+	/* Section 3 */
 	.project-card {
 		width: 100%;
 		margin: 10px 0;
 	}
 
+	/* Floating icons */
 	.floating-social-icons {
 		display: none;
 	}
 
+	/* Banner */
 	.banner h1 {
         font-size: 2.5rem;
         padding: 5px 0;
@@ -548,6 +553,7 @@ header {
         font-size: 1em;
     }
 
+	/* Section 2 */
 	.about-me h2 {
         font-size: 2.5rem;
     }
@@ -560,10 +566,41 @@ header {
     .skill-row i {
         font-size: 2.5rem;
     }
+
+	/* Section 3 */
+	.projects {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-info p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Media Queries mobile */
 @media (max-width: 480px) {
+	/* Banner */
 	.banner h1 {
 		text-align: center;
         font-size: 2rem;
@@ -574,6 +611,7 @@ header {
         font-size: 0.9em;
     }
 
+	/* Section 2 */
     .about-me h2 {
         font-size: 2rem;
     }
