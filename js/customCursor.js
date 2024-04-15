@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth > 768) {
+    const customCursor = document.getElementById('custom-cursor');
+    let enableCustomCursor = window.innerWidth > 768;
+
+    function updateCustomCursorVisibility() {
+        enableCustomCursor = window.innerWidth > 768;
+        if (!enableCustomCursor) {
+            customCursor.style.display = 'none';  // Asegura que el cursor esté oculto en dispositivos móviles
+        }
+    }
+
+    window.addEventListener('resize', updateCustomCursorVisibility);  // Actualiza el estado cuando se cambia el tamaño de la ventana
+
+    if (enableCustomCursor) {
         const banner = document.getElementById('home');
-        const customCursor = document.getElementById('custom-cursor');
         
         banner.addEventListener('mousemove', function(e) {
-            const x = e.pageX - banner.offsetLeft - 15;
-            const y = e.pageY - banner.offsetTop - 15;
+            if (!enableCustomCursor) return;  // No ejecuta el movimiento del cursor si no está habilitado
+            const bannerRect = banner.getBoundingClientRect();
+            const x = e.clientX - bannerRect.left - customCursor.offsetWidth / 2;
+            const y = e.clientY - bannerRect.top - customCursor.offsetHeight / 2;
+            customCursor.style.left = x + 'px';
+            customCursor.style.top = y + 'px';
             customCursor.style.display = 'block';
-            customCursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
         });
 
         banner.addEventListener('mouseleave', function() {
             customCursor.style.display = 'none';
         });
-    } else {
-        const customCursor = document.getElementById('custom-cursor');
-        if (customCursor) {
-            customCursor.style.display = 'none';
-        }
     }
 });

@@ -68,7 +68,7 @@ header {
 	float: right;
 	position: absolute;
 	right: 20px;
-	top: 25px;
+	top: 22px;
 	cursor: pointer;
 }
 
@@ -701,7 +701,6 @@ header {
 @media (max-width: 480px) {
 	/* Banner */
 	.banner h1 {
-		text-align: center;
         font-size: 2rem;
     }
 
