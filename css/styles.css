@@ -242,8 +242,17 @@ header {
 	margin-bottom: 20px;
 }
 
+.project-container {
+	display: grid;
+	grid-template-columns: repeat(3, 400px);
+	column-gap: 80px;
+	row-gap: 50px;
+}
+
 .project-card {
-	width: 21%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	margin: 10px;
 	background-color: #7377bf;
 	color: #333;
@@ -255,12 +264,21 @@ header {
 
 .project-card img {
 	width: 100%;
-	height: auto;
+	height: 250px;
 	border-bottom: 1px solid #ddd;
 }
 
 .project-info {
 	padding: 15px;
+	flex-grow: 1;
+}
+
+.project-card a {
+	display: flex;
+	width: 60%;
+	justify-content: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 .project-info h3 {
