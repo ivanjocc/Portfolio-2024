@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCustomCursorVisibility() {
         enableCustomCursor = window.innerWidth > 768;
         if (!enableCustomCursor) {
-            customCursor.style.display = 'none';  // Asegura que el cursor esté oculto en dispositivos móviles
+            customCursor.style.display = 'none';
         }
     }
 
-    window.addEventListener('resize', updateCustomCursorVisibility);  // Actualiza el estado cuando se cambia el tamaño de la ventana
+    window.addEventListener('resize', updateCustomCursorVisibility);
 
     if (enableCustomCursor) {
         const banner = document.getElementById('home');
         
         banner.addEventListener('mousemove', function(e) {
-            if (!enableCustomCursor) return;  // No ejecuta el movimiento del cursor si no está habilitado
+            if (!enableCustomCursor) return;
             const bannerRect = banner.getBoundingClientRect();
             const x = e.clientX - bannerRect.left - customCursor.offsetWidth / 2;
             const y = e.clientY - bannerRect.top - customCursor.offsetHeight / 2;

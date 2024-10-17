@@ -11,7 +11,7 @@ html, body {
 
 body {
 	font-family: 'JetBrains Mono', monospace;
-	background-color: #5e5ea5;
+	/* background-color: #5e5ea5; */
 }
 
 /* Header */
@@ -24,8 +24,8 @@ header {
 	justify-content: space-between;
 	padding: 10px 40px;
 	align-items: center;
-	background: linear-gradient(to bottom, #35356e 0%, #484885 100%);
-	color: white;
+	background-color: #023E8A;	
+	color: #CAF0F8 ;
 	z-index: 1000;
 	top: 0;
 	left: 0;
@@ -50,9 +50,13 @@ header {
 }
 
 .nav-links li a {
-	color: white;
 	text-decoration: none;
 	padding: 0 20px;
+	color: #CAF0F8;
+}
+
+.nav-links li a:hover {
+	color: #90E0EF ;
 }
 
 .mobile-icons {
@@ -83,7 +87,7 @@ header {
 }
 
 .banner h1 {
-	color: white;
+	color: #CAF0F8;
 	text-align: left;
 	font-size: 3rem;
 	overflow: hidden;
@@ -106,6 +110,7 @@ header {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -1;
+	filter: brightness(0.5);
 }
 
 #custom-cursor {
@@ -136,8 +141,8 @@ header {
 .banner-content button {
 	padding: 15px 30px;
 	margin-top: 30px;
-	background-color: #35356e;
-	color: white;
+	background-color: #00B4D8;
+	color: #03045E;
 	font-size: 1.2rem;
 	font-weight: bold;
 	border: none;
@@ -150,7 +155,7 @@ header {
 
 .banner-content button:hover {
 	transform: translateY(-5px);
-	background-color: #0056b3;
+	background-color: #0077B6;
 }
 
 .banner-content button:active {
@@ -170,12 +175,12 @@ header {
 	margin: 0 auto;
 	padding: 50px 0;
 	height: auto;
-	background: linear-gradient(to bottom, #35356e 0%, #5e5ea5 100%);
+	background-color: #00B4D8;
 }
 
 .about-me h2 {
 	font-size: 3rem;
-	color: white;
+	color: #CAF0F8  ;
 	text-shadow: 2px 2px 4px #000000;
 	padding-bottom: 30px;
 }
@@ -183,9 +188,10 @@ header {
 .about-me p {
 	font-size: 2rem;
 	width: 70%;
+	text-shadow: 2px 2px 4px #000000;
 	text-align: center;
 	margin: 0 auto;
-	color: white;
+	color: #CAF0F8;
 }
 
 .skill-grid {
@@ -213,22 +219,27 @@ header {
 .skill-row i {
 	padding: 0 20px;
 	transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+	color: #ADE8F4 ;
 }
 
 .skill-row i:hover {
-	color: #00ffff;
+	color: #90E0EF;
 	transform: scale(1.2);
+}
+
+.skills i:before {
+    border-color: #90E0EF ;
 }
 
 
 /* Section 3 */
 .projects {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: #5e5ea5;
+	background-color: #03045E;
 	padding: 20px 0;
 }
 
@@ -238,7 +249,7 @@ header {
 	font-size: 3rem;
 	text-align: center;
 	text-shadow: 2px 2px 4px #000000;
-	color: #ffffff;
+	color: #CAF0F8;
 	margin-bottom: 20px;
 }
 
@@ -254,7 +265,8 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 10px;
-	background-color: #7377bf;
+	border: 1px solid #90E0EF;
+	background-color: #FFFFFF;
 	color: #333;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	border-radius: 8px;
@@ -283,7 +295,7 @@ header {
 
 .project-info h3 {
 	margin-top: 0;
-	color: #2c2f40;
+	color: #03045E;
 	font-weight: bold;
 	font-size: 1.5rem;
 	margin-bottom: 10px;
@@ -291,15 +303,17 @@ header {
 
 .project-info p {
 	margin-bottom: 15px;
-	color: #141313;
+	color: #023E8A;
 	line-height: 1.4;
 }
 
 .btn {
 	display: inline-block;
 	padding: 10px 20px;
-	background-color: #5a5a9f;
-	color: #fff;
+	background-color: #0096C7;
+	color: #FFFFFF;
+	font-size: 1.2rem;
+	font-weight: bold;
 	text-decoration: none;
 	border-radius: 5px;
 	border: 2px solid transparent;
@@ -307,8 +321,8 @@ header {
 }
 
 .btn:hover {
-	background-color: #484885;
-	color: #000;
+	background-color: #48CAE4;
+	/* color: #000; */
 	transform: translateY(-3px);
 	border-color: #fff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -326,7 +340,7 @@ header {
 	display: inline-block;
 	margin: 40px auto;
 	padding: 20px 50px;
-	background-color: #5a5a9f;
+	background-color: #0077B6;
 	color: #ffffff;
 	border: none;
 	border-radius: 5px;
@@ -336,7 +350,7 @@ header {
 }
 
 #loadMore:hover {
-	background-color: #484885;
+	background-color: #0096C7;
 	transform: translateY(-3px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -346,7 +360,7 @@ header {
 .contact-section {
 	height: 500px;
 	padding-top: 50px;
-	background: linear-gradient(to bottom, #5e5ea5 0%, #6a6abf 100%);
+	background-color: #00B4D8;
 	text-align: center;
 	color: #ffffff;
 }
@@ -356,6 +370,7 @@ header {
 	font-size: 3rem;
 	text-shadow: 2px 2px 4px #000000;
 	margin-bottom: 30px;
+	color: #CAF0F8;
 }
 
 .contact-section .email-container {
@@ -367,28 +382,28 @@ header {
 	font-size: 1.2rem;
 	padding: 10px;
 	width: 20%;
-	border: 2px solid #ddd;
+	border: 2px solid #90E0EF;
 	border-radius: 5px;
 	margin-right: 10px;
-	color: #333;
-	background-color: #fff;
-	color: #b4afaf;
+	color: #03045E;
+	background-color: #FFFFFF;
+	cursor: pointer;
 }
 
 .contact-section .email-container button {
 	padding: 10px 20px;
-	background-color: #35356e;
+	background-color: #48CAE4;
 	color: #fff;
 	font-size: 1rem;
 	text-decoration: none;
 	border-radius: 5px;
-	border: 2px solid transparent;
-	transition: all 0.3s ease;
+	border: none;
+    transition: all 0.3s ease;
 	cursor: pointer;
 }
 
 .contact-section .email-container button:hover {
-	background-color: #5a5a9f;
+	background-color: #90E0EF;
 	color: #000;
 	transform: translateY(-3px);
 	border-color: #fff;
@@ -398,23 +413,25 @@ header {
 .contact-section .cv-download h3 {
 	font-size: 2rem;
 	margin: 20px 0;
+	color: #CAF0F8;
 }
 
 .contact-section .cv-download a {
 	display: inline-block;
-	padding: 10px 20px;
-	background-color: #35356e;
+	padding: 15px 20px;
+	font-size: 1.2rem;
+	background-color: #023E8A;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 5px;
-	transition: background-color 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .toast {
 	visibility: hidden;
 	min-width: 150px;
-	background-color: #333;
-	color: #fff;
+	/* background-color: #333; */
+	color: #023E8A;
 	text-align: center;
 	border-radius: 5px;
 	padding: 16px;
@@ -434,7 +451,8 @@ header {
 }
 
 .contact-section .cv-download a:hover {
-	background-color: #5a5a9f;
+	background-color: #03045E;
+	transform: translateY(-3px);
 }
 
 
@@ -476,7 +494,7 @@ header {
 }
 
 .footer-social-icons i:hover {
-	color: #00ffff;
+	color: #48CAE4;
 	transform: scale(1.2);
 }
 
@@ -490,7 +508,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #35356e;
+    background-color: #0077B6;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
@@ -500,7 +518,7 @@ header {
 .floating-social-icons a {
     width: 60px;
     height: 60px;
-    color: white;
+    color: #FFFFFF;
     margin: 15px;
     font-size: 30px;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -509,14 +527,15 @@ header {
     justify-content: center;
     border-radius: 50%;
 	text-decoration: none;
+	background-color: #023E8A;
 }
 
 .floating-social-icons a:hover {
     transform: translateY(-5px) scale(1.2);
-    color: #ff00ff;
-    box-shadow: 0 0 20px #ff00ff;
-    background-color: rgba(255, 0, 255, 0.2);
-    border-radius: 50%;
+    color: #CAF0F8;
+    box-shadow: 0 0 20px #90E0EF;
+    background-color: rgba(0, 119, 182, 0.5);
+	border-radius: 50%;
 }
 
 
@@ -769,7 +788,7 @@ header {
 
 	/* Section 3 */
 	.project-card {
-        width: 100%;
+        width: 200px;
     }
 
     .projects {
