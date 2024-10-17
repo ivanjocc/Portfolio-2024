@@ -50,6 +50,31 @@ const translationsMobile = {
 			"title": "Twitter Clone in NodeJS",
 			"description": "API developed in NodeJS that simulates the basic functionality of Twitter, including user creation and tweet posting."
 		},
+		"project8": {
+			"title": "ApproExpert",
+			"description": "Development of a corporate website for Appro Expert, facilitating navigation and promoting import, export and commercial representation services between Canada and Africa."
+		},
+		"project9": {
+			"title": "Autopassion",
+			"description": "Development of a website for Autopassion, highlighting their automotive aesthetic services, such as cleaning and detailing. Implementation of a clear portfolio and pricing structure."
+		},
+		"project10": {
+			"title": "Débouchenet",
+			"description": "Development of a website for Débouchenet, a company specializing in residential renovation and maintenance."
+		},
+		"project11": {
+			"title": "First Technology Plus",
+			"description": "Development of a website for First Technology Plus which specializes in providing top-notch solutions across multiple sectors, including construction, industrial maintenance, international trade, vehicle rental and medical consumables."
+		},
+		"project12": {
+			"title": "MessagerieAdam",
+			"description": "Creation of a website for MessagerieAdam, a company dedicated to offering fast, efficient and professional delivery solutions."
+		},
+		"project13": {
+			"title": "TransportSteben",
+			"description": "Creation of a website for Transport Steben, an established company in the transport sector that offers high-quality general transport services for both individuals and companies."
+		},
+		"loadMoreBtn": "Load More",
 		"contactTitle": "Contact Me",
 		"copyButton": "Copy",
 		"emailButton": "Email Me",
@@ -97,6 +122,31 @@ const translationsMobile = {
 			"title": "Clone de Twitter en NodeJS",
 			"description": "API développée en NodeJS qui simule les fonctionnalités de base de Twitter, y compris la création d'utilisateurs et la publication de tweets."
 		},
+		"project8": {
+			"title": "ApproExpert",
+			"description": "Développement d'un site web d'entreprise pour Appro Expert, facilitant la navigation et promouvant les services d'importation, d'exportation et de représentation commerciale entre le Canada et l'Afrique."
+		},
+		"project9": {
+			"title": "Autopassion",
+			"description": "Développement d'un site web pour Autopassion, mettant en avant leurs services esthétiques automobiles, tels que le nettoyage et le detailing. Mise en place d'un portfolio clair et d'une structure de tarification."
+		},
+		"project10": {
+			"title": "Débouchenet",
+			"description": "Développement d'un site web pour Débouchenet, une entreprise spécialisée dans la rénovation et l'entretien résidentiels."
+		},
+		"project11": {
+			"title": "First Technology Plus",
+			"description": "Développement d'un site web pour First Technology Plus qui se spécialise dans la fourniture de solutions de premier ordre dans plusieurs secteurs, y compris la construction, la maintenance industrielle, le commerce international, la location de véhicules et les consommables médicaux."
+		},
+		"project12": {
+			"title": "MessagerieAdam",
+			"description": "Création d'un site web pour MessagerieAdam, une entreprise dédiée à offrir des solutions de livraison rapides, efficaces et professionnelles."
+		},
+		"project13": {
+			"title": "TransportSteben",
+			"description": "Création d'un site web pour Transport Steben, une entreprise établie dans le secteur du transport qui propose des services de transport général de haute qualité pour les particuliers et les entreprises."
+		},
+		"loadMoreBtn": "Voir Plus",
 		"contactTitle": "Contactez-moi",
 		"copyButton": "Copier",
 		"emailButton": "Envoyez-moi un email",
@@ -128,6 +178,8 @@ function changeLanguage(lang) {
 		card.querySelector('h3').textContent = translationsMobile[lang][`project${index + 1}`].title;
 		card.querySelector('p').textContent = translationsMobile[lang][`project${index + 1}`].description;
 	});
+
+	document.querySelector('#loadMore').textContent = translations[lang].loadMoreBtn;
 
 	// Contact me
 	document.querySelector('.contact-section .section-title').textContent = translationsMobile[lang].contactTitle;
