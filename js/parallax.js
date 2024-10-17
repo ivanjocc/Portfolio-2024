@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             threshold: 0.3
         });
 
-        const sections = document.querySelectorAll('section:not(#home)');
+        const sections = document.querySelectorAll('section:not(#home):not(#projects)');
         sections.forEach(section => {
             section.classList.add('fade-in-section');
             observer.observe(section);
