@@ -11,7 +11,6 @@ html, body {
 
 body {
 	font-family: 'JetBrains Mono', monospace;
-	/* background-color: #5e5ea5; */
 }
 
 /* Header */
@@ -24,11 +23,12 @@ header {
 	justify-content: space-between;
 	padding: 10px 40px;
 	align-items: center;
-	background-color: #023E8A;	
+	background-color: #023E8A;
 	color: #CAF0F8 ;
 	z-index: 1000;
 	top: 0;
 	left: 0;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -53,6 +53,7 @@ header {
 	text-decoration: none;
 	padding: 0 20px;
 	color: #CAF0F8;
+	font-size: 1.1rem;
 }
 
 .nav-links li a:hover {
@@ -241,6 +242,7 @@ header {
 	align-items: center;
 	background-color: #023E8A;
 	padding: 20px 0;
+	padding-bottom: 50px;
 }
 
 .section-title {
