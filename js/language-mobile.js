@@ -163,6 +163,7 @@ function changeLanguage(lang) {
 	document.querySelector('nav .nav-links a[href="#home"]').textContent = translationsMobile[lang].home;
 	document.querySelector('nav .nav-links a[href="#about-skills"]').textContent = translationsMobile[lang].aboutMe;
 	document.querySelector('nav .nav-links a[href="#projects"]').textContent = translationsMobile[lang].projects;
+	document.querySelector('nav .nav-links a[href="#contact"]').textContent = translationsMobile[lang].contactMe;
 
 	// Banner
 	document.querySelector('#home .banner-content h1').innerHTML = translationsMobile[lang].bannerTitle;
